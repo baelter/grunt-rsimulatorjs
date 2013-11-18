@@ -35,21 +35,22 @@ module.exports = function(grunt) {
         }
       },
       custom_options: {
-        options: {
-            simulator: {
-                port: 6001,
-                rootPath: './mockmock',
-                useRootRelativePath: false
-            },
-            proxy: {
-                port : 8001,
-                pathnameOnly : false,
-                router : {
-                    '/hoo' : '127.0.0.1:' + 6001,
-                    '' : '127.0.0.1:' + 9001
-                }
-            }
-        }
+          options: {
+              simulator: {
+                  port: 9005,
+                  rootPath: './mocked-rest-api',
+                  useRootRelativePath: true
+              },
+              proxy: {
+                  port: 8001,
+                  router : {
+                      '/public-rest' : '127.0.0.1:' + 9005,
+                      '/secure-rest' : '127.0.0.1:' + 9005,
+                      '/public' : '127.0.0.1:9001',
+                      '' : '127.0.0.1:9001'
+                  }
+              }
+          }
       }
     },
 
