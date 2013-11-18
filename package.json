@@ -1,0 +1,45 @@
+{
+  "name": "grunt-rsimulatorjs",
+  "description": "Grunt plugin for rsimulatorjs-server",
+  "version": "0.1.0",
+  "homepage": "https://github.com/baelter/grunt-rsimulatorjs",
+  "author": {
+    "name": "Anders Bälter",
+    "email": "abaelter@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/baelter/grunt-rsimulatorjs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/baelter/grunt-rsimulatorjs/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/baelter/grunt-rsimulatorjs/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "Gruntfile.js",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "~0.6.0",
+    "grunt-contrib-clean": "~0.4.0",
+    "grunt-contrib-nodeunit": "~0.2.0",
+    "grunt": "~0.4.1"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.1"
+  },
+  "keywords": [
+    "gruntplugin"
+  ],
+  "dependencies": {
+    "rsimulatorjs-server": "~0.3.9"
+  }
+}
