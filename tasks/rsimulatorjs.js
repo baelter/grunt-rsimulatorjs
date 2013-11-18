@@ -33,18 +33,18 @@ module.exports = function(grunt) {
             serverOptions = {
                 simulatorConfig: options.simulator,
                 proxyConfig: {
-                    port: options.proxy.port,
+                    port: options.proxy.port || 9004,
                     options: {
-                        pathnameOnly: options.proxy.pathnameOnly,
+                        pathnameOnly: options.proxy.pathnameOnly || true,
                         router: options.proxy.router
                     }
                 }
             };
         grunt.verbose.writeln('Grunt-rsimulatorjs options: ', JSON.stringify(options));
         rsimulatorjsServer(serverOptions);
-        grunt.log.ok('Started rsimulator on ' + options.simulator.port + ' with proxy on ' + options.proxy.port + ' with the following routes:');
-        for(route in options.proxy.router) {
-            grunt.log.ok(route + ' : ' + options.proxy.router[route]);
+        grunt.log.ok('Started rsimulator on ' + serverOptions.simulatorConfig.port + ' with proxy on ' + serverOptions.proxyConfig.port + ' with the following routes:');
+        for(route in serverOptions.proxyConfig.options.router) {
+            grunt.log.ok(route + ' : ' + serverOptions.proxyConfig.options.router[route]);
         }
     });
 
