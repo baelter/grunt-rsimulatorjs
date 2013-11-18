@@ -1,7 +1,7 @@
 {
   "name": "grunt-rsimulatorjs",
   "description": "Grunt plugin for rsimulatorjs-server",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/baelter/grunt-rsimulatorjs",
   "author": {
     "name": "Anders Bälter",

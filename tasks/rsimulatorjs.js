@@ -41,9 +41,9 @@ module.exports = function(grunt) {
                 }
             };
         rsimulatorjsServer(serverOptions);
-        grunt.log.writeln('Started rsimulator on ' + options.simulator.port + ' with proxy on ' + options.proxy.port + ' with the following routes:');
+        grunt.log.ok('Started rsimulator on ' + options.simulator.port + ' with proxy on ' + options.proxy.port + ' with the following routes:');
         for(route in options.proxy.router) {
-            grunt.log.writeln(route + ' : ' + options.proxy.router[route]);
+            grunt.log.ok(route + ' : ' + options.proxy.router[route]);
         }
     });
 
