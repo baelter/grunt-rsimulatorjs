@@ -34,12 +34,13 @@ module.exports = function(grunt) {
                     }
                 }
             }
+            serverOptions.logLevel = options.logLevel;
         grunt.verbose.writeln('Grunt-rsimulatorjs options: ', JSON.stringify(options));
         rsimulatorjsServer(serverOptions);
         grunt.log.ok('Started rsimulator on ' + serverOptions.simulatorConfig.port);
         if (serverOptions.proxyConfig) {
             grunt.log.ok(' with proxy on ' + serverOptions.proxyConfig.port + ' with the following routes:');
-            
+
             for(route in serverOptions.proxyConfig.options.router) {
                 grunt.log.ok(route + ' : ' + serverOptions.proxyConfig.options.router[route]);
             }
