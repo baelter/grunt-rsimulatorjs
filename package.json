@@ -40,6 +40,6 @@
     "gruntplugin"
   ],
   "dependencies": {
-    "rsimulatorjs-server": "http://cuso.edb.se/stash/scm/njsp/rsimulatorjs-server.git#~0.4.0"
+    "rsimulatorjs-server": "git+http://cuso.edb.se/stash/scm/njsp/rsimulatorjs-server.git#0.4.0"
   }
 }
